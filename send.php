@@ -8,6 +8,7 @@ require 'phpmailer/Exception.php';
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
+$email = $_POST['email'];
 
 
 // Формирование самого письма
@@ -15,6 +16,7 @@ $title = "Новое обращение Best Tour Plan";
 $body = "
 <h2>Новое Обращение</h2>
 <b>Имя:</b> $name<br>
+<b>Почта:</b> $email<br><br>
 <b>Телефон:</b> $phone<br><br>
 <b>Сообщение:</b><br>$message
 ";
@@ -54,4 +56,4 @@ else {$result = "error";}
 }
 
 // Отображение результата
-echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+header('Location: thankyou.html');
