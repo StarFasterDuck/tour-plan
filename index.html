@@ -8,7 +8,7 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;700;800&display=swap"
-      rel="preload"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
@@ -19,7 +19,7 @@
     <header class="navbar navbar--mobile_fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="#" class="logo" data-aos="flip-left" data-aos-delay="100">
+          <a href="https://starfasterduck.ru/Hotel-Booking/" class="logo" data-aos="flip-left" data-aos-delay="100">
             <img src="img/horizon-logo.svg" alt="Logo" class="logo__image" />
           </a>
           <form
@@ -158,7 +158,7 @@
           <!-- /.hotel-info__text -->
           <div class="rating hotel-info__rating">
             <span class="rating__text">User Rattings</span>
-            <span class="rating__counter">4.5/5</span>
+            <span class="rating__counter">4.5/<span class="rating__counterpart">5</span></span>
           </div>
           <!-- /.hotel-info__rating -->
         </div>
@@ -183,14 +183,14 @@
               <div class="swiper-slide hotel-slider__item">
                 <img
                   class="hotel-slider__image"
-                  src="img/slide.jpg"
+                  src="img/slide-2.jpg"
                   alt="slide"
                 />
               </div>
               <div class="swiper-slide hotel-slider__item">
                 <img
                   class="hotel-slider__image"
-                  src="img/slide.jpg"
+                  src="img/slide-3.jpg"
                   alt="slide"
                 />
               </div>
@@ -246,13 +246,11 @@
                 View Other Options
               </button>
             </div>
+            
             <!-- /.booking -->
             <div class="map">
-              <iframe
+              <iframe class="maps"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2719.666144499664!2d82.92522584592915!3d55.026436972860424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dfe5d97d59480f%3A0xc42905471d2213b7!2sDoubleTree%20by%20Hilton%20Hotel%20Novosibirsk!5e0!3m2!1sru!2sru!4v1595514675318!5m2!1sru!2sru"
-                width="100%"
-                height="213"
-                frameborder="0"
                 style="border: 0;"
                 allowfullscreen=""
                 aria-hidden="false"
@@ -270,25 +268,16 @@
     <section class="newsletter">
       <div class="newsletter-wrapper">
         <h2
-          class="newsletter-title newsletter__title"
-          data-aos="fade-up-right"
-          data-aos-delay="200"
-        >
+          class="newsletter-title newsletter__title">
           subscribe to our
           <span
             class="newsletter-title__strong"
-            data-aos="fade-up-right"
-            data-aos-delay="200"
-            >Newsletter</span
-          >
+            >Newsletter</span>
         </h2>
         <form
           action="send.php"
           method="POST"
-          class="subscribe newsletter__subscribe"
-          data-aos="fade-up-left"
-          data-aos-delay="200"
-        >
+          class="subscribe newsletter__subscribe">
           <input
             type="email"
             class="subscribe__input"
@@ -448,7 +437,7 @@
               class="card__image"
             />
             <h3 class="card__title">The curious corner of chamarel</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
           <div
@@ -462,7 +451,7 @@
               class="card__image"
             />
             <h3 class="card__title">Gymkhana club golf course</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
           <div
@@ -476,7 +465,7 @@
               class="card__image"
             />
             <h3 class="card__title">Tamarind falls hiking trip - full day</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
           <div
@@ -490,7 +479,7 @@
               class="card__image"
             />
             <h3 class="card__title">The blue marine discovery quest</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
         </div>
@@ -599,7 +588,7 @@
           </div>
           <!-- /.footer__list -->
           <div class="footer__contact-detalis">
-            <h3 class="footer__title footer_title--mb-3">Contact Details</h3>
+            <h3 class="footer__title footer__title--mb-3">Contact Details</h3>
             <p class="footer__text">
               Feel free to contact us by phone, email or by our contact form
             </p>
@@ -623,10 +612,10 @@
                     alt="icon:phone"
                   />
                 </div>
-                Tel (business hours) : 269 1500 <br />
-                Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00
+                Tel (business hours) : <a class="footer__item" href="tel:2691500">269 1500</a> <br />
+                Tel (hotline) Monday - Saturday: <a class="footer__item" href="tel:52-56-61-38">52-56-61-38</a> (08:00 am – 20:00
                 pm) <br />
-                Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+                Tel (hotline) Sunday: <a class="footer__item" href="tel:52-56-61-38">52-56-61-38</a> (08:00 am – 14:00 pm)
               </li>
               <li class="footer__item footer__item--mb-2">
                 <div class="footer__icon-wrapper">
@@ -642,7 +631,7 @@
           </div>
           <!-- /.footer__contact-detalis -->
           <div class="footer__contact-form">
-            <h3 class="footer__title footer_title--mb-3">Send us a message</h3>
+            <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
             <form action="send.php" method="POST" class="footer__form form">
               <div class="footer__input-group">
                 <input
@@ -692,7 +681,7 @@
         <a href="#" class="modal__close">
           <img src="img/close.svg" alt="icon: close" />
         </a>
-        <h3 class="modal__title modal_title--mb-3">Booking</h3>
+        <h3 class="modal__title modal__title--mb-3">Booking</h3>
         <form action="send.php" method="POST" class="modal__form form">
           <input
             type="text"

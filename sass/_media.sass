@@ -11,11 +11,21 @@
   .card
     width: 230px
     height: 230px
+
   .footer
     &__input
       &-group
         flex-basis: 100%
 @media (max-width: 992px)
+  .breadcrumb
+    &-list
+      &__link:hover
+        background-color: #F5FAFE
+  .subscribe
+    &__button:hover
+      background-color: $primary
+  .button:hover
+    background-color: $primary
   .container, 
   .newsletter-wrapper
     max-width: 700px
@@ -36,6 +46,8 @@
   .search
     &__input
       width: 340px
+    &__button:hover
+      background-color: $primary
   .hotel
     &-grid
       flex-direction: column
@@ -64,10 +76,14 @@
   .card
     width: 340px
     height: 255px
+    &__button:hover
+      background-color: $primary
   .footer
     &-wrapper
       grid-template-columns: repeat(6, 1fr)
       grid-row-gap: 40px
+    &__link:hover
+      background-color: $dark
     &__input
       &-group
         flex-basis: 48%
@@ -101,6 +117,8 @@
     &__button
       margin-bottom: 10px
       flex-basis: 100%
+    &__button:hover
+      background-color: $primary
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -199,7 +217,7 @@
       align-items: flex-start
   .reviews
     &__title
-      font-size: 18px
+      font-size: 20px
       line-height: 23px
     &-slider
       &__item
@@ -244,6 +262,9 @@
       margin-bottom: 20px
     &-slider
       height: 250px
+      &__button
+        width: 12px
+        height: 12px
   .newsletter
     padding: 76px 0 83px 0
     &-title
@@ -259,6 +280,9 @@
     width: 100%
   .card
     width: 100%
+  .search
+    &__input
+      width: 245px
   .footer
     &-wrapper
       grid-template-columns: 1fr

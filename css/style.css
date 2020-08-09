@@ -27,6 +27,7 @@ img {
   border: none;
   padding: 0 23px;
   height: 50px;
+  outline: none;
 }
 
 .message {
@@ -50,11 +51,20 @@ img {
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  outline: none;
+}
+
+.button:hover {
+  background-color: #F08080;
 }
 
 .invalid {
   color: #EC1F46;
   border-bottom: 1px solid #EC1F46;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
 }
 
 .cancel {
@@ -449,6 +459,10 @@ template {
   line-height: 18px;
 }
 
+.navbar-menu__link:hover {
+  background-color: #2F4F4F;
+}
+
 .navbar-menu__item--mobile_visible {
   display: none;
 }
@@ -475,6 +489,7 @@ template {
   font-size: 12px;
   line-height: 15px;
   color: #333333;
+  outline: none;
 }
 
 .search__button {
@@ -486,6 +501,11 @@ template {
   border: none;
   background-color: #EC1F46;
   cursor: pointer;
+  outline: none;
+}
+
+.search__button:hover {
+  background-color: #F08080;
 }
 
 .user {
@@ -535,6 +555,10 @@ template {
   color: inherit;
 }
 
+.breadcrumb-list__link:hover {
+  background-color: #D3D3D3;
+}
+
 .hotel {
   padding-top: 23px;
   padding-bottom: 70px;
@@ -544,7 +568,7 @@ template {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 20px;
+  padding-bottom: 2px;
 }
 
 .hotel-info__offer {
@@ -553,7 +577,7 @@ template {
 }
 
 .hotel-info__name {
-  margin-top: 4px;
+  margin-top: 1px;
   margin-bottom: 0;
 }
 
@@ -592,6 +616,7 @@ template {
 .hotel-slider {
   width: 728px;
   height: 450px;
+  margin-left: 0;
 }
 
 .hotel-slider__item {
@@ -612,6 +637,7 @@ template {
   left: 0;
   right: 0;
   background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%);
+  border-radius: 8px;
   z-index: 10;
 }
 
@@ -628,6 +654,7 @@ template {
   background-position: center;
   background-size: 10px;
   background-color: transparent;
+  outline: none;
 }
 
 .hotel-slider__button--next {
@@ -672,13 +699,20 @@ template {
   line-height: 18px;
 }
 
+.rating__counterpart {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 13px;
+}
+
 .booking {
   background-color: #0A223D;
   color: #fff;
   border-radius: 8px;
   width: 350px;
   min-height: 210px;
-  padding: 28px;
+  padding: 25px;
 }
 
 .booking__info {
@@ -783,6 +817,11 @@ template {
   overflow: hidden;
 }
 
+.maps {
+  width: 100%;
+  height: 213px;
+}
+
 .newsletter {
   position: relative;
   padding: 98px 0 87px 0;
@@ -861,6 +900,10 @@ template {
   background-color: #EC1F46;
   color: #fff;
   cursor: pointer;
+}
+
+.subscribe__button:hover {
+  background-color: #F08080;
 }
 
 .reviews {
@@ -949,7 +992,6 @@ template {
   height: 90px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 9px;
 }
 
 .reviews-slider__username {
@@ -1058,6 +1100,11 @@ template {
   background-color: #EC1F46;
   border-radius: 4px;
   cursor: pointer;
+  outline: none;
+}
+
+.card__button:hover {
+  background-color: #F08080;
 }
 
 .footer {
@@ -1139,13 +1186,14 @@ template {
 }
 
 .footer__item {
-  display: flex;
+  display: inline-block;
   align-items: flex-start;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 160%;
   color: #BDBDBD;
+  text-decoration: none;
 }
 
 .footer__item--mb-2 {
@@ -1164,6 +1212,10 @@ template {
 .footer__link {
   text-decoration: none;
   color: inherit;
+}
+
+.footer__link:hover {
+  background-color: #191970;
 }
 
 .footer__input {
@@ -1317,6 +1369,15 @@ template {
 }
 
 @media (max-width: 992px) {
+  .breadcrumb-list__link:hover {
+    background-color: #F5FAFE;
+  }
+  .subscribe__button:hover {
+    background-color: #EC1F46;
+  }
+  .button:hover {
+    background-color: #EC1F46;
+  }
   .container,
   .newsletter-wrapper {
     max-width: 700px;
@@ -1341,6 +1402,9 @@ template {
   }
   .search__input {
     width: 340px;
+  }
+  .search__button:hover {
+    background-color: #EC1F46;
   }
   .hotel-grid {
     flex-direction: column;
@@ -1377,9 +1441,15 @@ template {
     width: 340px;
     height: 255px;
   }
+  .card__button:hover {
+    background-color: #EC1F46;
+  }
   .footer-wrapper {
     grid-template-columns: repeat(6, 1fr);
     grid-row-gap: 40px;
+  }
+  .footer__link:hover {
+    background-color: #0A223D;
   }
   .footer__input-group {
     flex-basis: 48%;
@@ -1420,6 +1490,9 @@ template {
   .modal__button {
     margin-bottom: 10px;
     flex-basis: 100%;
+  }
+  .modal__button:hover {
+    background-color: #EC1F46;
   }
 }
 
@@ -1534,7 +1607,7 @@ template {
     align-items: flex-start;
   }
   .reviews__title {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 23px;
   }
   .reviews-slider__item {
@@ -1590,6 +1663,10 @@ template {
   .hotel-slider {
     height: 250px;
   }
+  .hotel-slider__button {
+    width: 12px;
+    height: 12px;
+  }
   .newsletter {
     padding: 76px 0 83px 0;
   }
@@ -1610,6 +1687,9 @@ template {
   }
   .card {
     width: 100%;
+  }
+  .search__input {
+    width: 245px;
   }
   .footer-wrapper {
     grid-template-columns: 1fr;

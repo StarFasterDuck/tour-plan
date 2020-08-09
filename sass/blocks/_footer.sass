@@ -53,13 +53,14 @@
     &--mb-3
       margin-bottom: 30px
   &__item
-    display: flex
+    display: inline-block
     align-items: flex-start
     font-style: normal
     font-weight: normal
     font-size: 14px
     line-height: 160%
     color: $footer-text-color
+    text-decoration: none
     &--mb-2
       margin-bottom: 20px
   &__icon
@@ -70,7 +71,9 @@
     margin-bottom: 22px
   &__link
     text-decoration: none
-    color: inherit 
+    color: inherit
+  &__link:hover
+      background-color: #191970
   &__input
     width: 100%
     &-group
